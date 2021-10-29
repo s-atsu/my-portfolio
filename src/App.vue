@@ -1,26 +1,54 @@
 <template>
-  <router-view />
+  <div class="l-page">
+    <Header />
+
+    <Loading v-show="loading"></Loading>
+    <router-view></router-view>
+
+    <Footer />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="scss">
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #1a1a1a;
+  color: #f1f1f1;
   text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  &:link,
+  &:visited {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
 }
 </style>
+
+<script>
+import "normalize.css";
+import Loading from "./components/Loading.vue";
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+
+export default {
+  name: "App",
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2600);
+  },
+  components: {
+    Loading,
+    Header,
+    Footer,
+  },
+};
+</script>

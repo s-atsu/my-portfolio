@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
+  <main class="p-index">
     <Mv />
-  </div>
+  </main>
 </template>
 
 <script>
 import Mv from "../components/pages/top/Mv.vue";
 
 export default {
-  name: "Home",
+  name: "Index",
   components: {
     Mv,
   },

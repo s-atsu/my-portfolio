@@ -29,9 +29,9 @@ a {
 
 <script>
 import "normalize.css";
-import Loading from "./components/Loading.vue";
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Loading from "./components/parts/Loading.vue";
+import Header from "./components/globals/Header.vue";
+import Footer from "./components/globals/Footer.vue";
 
 export default {
   name: "App",

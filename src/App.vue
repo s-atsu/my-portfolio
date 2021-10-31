@@ -1,8 +1,8 @@
 <template>
   <div class="l-page">
+    <Loading v-show="loading"></Loading>
     <Header />
 
-    <Loading v-show="loading"></Loading>
     <router-view></router-view>
 
     <Footer />

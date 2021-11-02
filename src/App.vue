@@ -28,6 +28,16 @@ a {
 img {
   width: 100%;
 }
+.l-section {
+  padding: 0 40px;
+  margin-top: 100px;
+}
+.l-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px;
+  border-top: 1px solid #fff;
+}
 </style>
 
 <script>

@@ -31,24 +31,6 @@
 </template>
 
 <style lang="scss" scoped>
-.l-section {
-  padding: 0 40px;
-  margin-top: 100px;
-}
-.l-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 40px;
-  border-top: 1px solid #fff;
-}
-.p-index__title {
-  font-size: 30px;
-  font-weight: bold;
-}
-.p-index__subtitle {
-  font-size: 14px;
-  display: block;
-}
 .p-index__services {
   list-style: none;
   padding: 0;

@@ -5,6 +5,8 @@
     <Service />
 
     <About />
+
+    <Works />
   </main>
 </template>
 
@@ -12,6 +14,7 @@
 import Mv from "../components/pages/top/Mv.vue";
 import Service from "../components/pages/top/Service.vue";
 import About from "../components/pages/top/About.vue";
+import Works from "../components/pages/top/Works.vue";
 
 export default {
   name: "Index",
@@ -19,6 +22,7 @@ export default {
     Mv,
     Service,
     About,
+    Works,
   },
 };
 </script>

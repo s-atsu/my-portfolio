@@ -1,6 +1,8 @@
 <template>
-  <div class="l-page">
-    <Loading v-show="loading"></Loading>
+  <div class="l-page" v-on:mousemove="callChildMethod()">
+    <Loading v-show="loading" />
+    <MouseStalker ref="child" />
+
     <Header />
 
     <router-view></router-view>
@@ -43,6 +45,7 @@ img {
 <script>
 import "normalize.css";
 import Loading from "./components/parts/Loading.vue";
+import MouseStalker from "./components/parts/MouseStalker.vue";
 import Header from "./components/globals/Header.vue";
 import Footer from "./components/globals/Footer.vue";
 
@@ -60,8 +63,14 @@ export default {
   },
   components: {
     Loading,
+    MouseStalker,
     Header,
     Footer,
+  },
+  methods: {
+    callChildMethod() {
+      this.$refs.child.getMousePosition(event);
+    },
   },
 };
 </script>
